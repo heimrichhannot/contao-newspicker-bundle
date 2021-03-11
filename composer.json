@@ -22,10 +22,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Heimrichhannot\\NewspickerBundle\\": "src/"
+            "HeimrichHannot\\NewspickerBundle\\": "src/"
         }
     },
     "extra": {
-        "contao-manager-plugin": "Heimrichhannot\\NewspickerBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "HeimrichHannot\\NewspickerBundle\\ContaoManager\\Plugin"
     }
 }
