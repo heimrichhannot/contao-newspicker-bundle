@@ -1,0 +1,31 @@
+{
+    "name": "heimrichhannot/contao-newspicker-bundle",
+    "description": "A bundle providing a news picker widget",
+    "keywords": ["contao", "bundle", "news", "widget", "picker"],
+    "type": "contao-bundle",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Thomas Könrer",
+            "email": "digitales@heimrich-hannot.de",
+            "homepage": "http://heimrich-hannot.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/heimrichhannot/contao-newspicker-bundle/issues",
+        "source": "https://github.com/heimrichhannot/contao-newspicker-bundle"
+    },
+    "require": {
+        "contao/core-bundle": "^4.4",
+        "contao/news-bundle": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Heimrichhannot\\NewspickerBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Heimrichhannot\\NewspickerBundle\\ContaoManager\\Plugin"
+    }
+}
