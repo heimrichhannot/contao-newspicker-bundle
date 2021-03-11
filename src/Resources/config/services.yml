@@ -1,0 +1,5 @@
+services:
+  HeimrichHannot\NewspickerBundle\Picker\OnlyNewsPickerProvider:
+    parent: 'contao_news.picker.news_provider'
+    tags:
+      - { name: contao.picker_provider, priority: 128 }
