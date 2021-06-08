@@ -39,7 +39,16 @@ class NewspickerWidget extends Widget
         // Can be an array
         if (!empty($this->varValue) && null !== ($newsCollection = NewsModel::findMultipleByIds((array) $this->varValue))) {
             Controller::loadDataContainer('tl_news');
+
+            if (false !== ($permissionCallback = array_search(['tl_news', 'checkPermission'], $GLOBALS['TL_DCA']['tl_news']['config']['onload_callback']))) {
+                unset($GLOBALS['TL_DCA']['tl_news']['config']['onload_callback'][$permissionCallback]);
+            }
+
             $dc = new DC_Table('tl_news');
+
+            if (false !== $permissionCallback) {
+                $GLOBALS['TL_DCA']['tl_news']['config']['onload_callback'][$permissionCallback] = ['tl_news', 'checkPermission'];
+            }
 
             /** @var NewsModel $newsModel */
             foreach ($newsCollection as $newsModel) {
